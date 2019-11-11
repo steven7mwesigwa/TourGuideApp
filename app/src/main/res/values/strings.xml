@@ -6,4 +6,9 @@
     <string name="drawer_share">Share</string>
     <string name="drawer_send">Send</string>
     <string name="drawer_communicate">Communicate</string>
+    <string name="author_email">contact@stevenmwesigwa.com</string>
+    <string name="app_image_description">Tour Guide App Image / Logo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
