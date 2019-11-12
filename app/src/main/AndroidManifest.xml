@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stevenmwesigwa.tourguideapp">
+    <!--    Ask for internet permission to load Images-->
+    <uses-permission android:name="android.permission.INTERNET" />
 <!--    android:theme="@style/AppTheme.NoActionBar  noactionbar for just a specific Activity-->
 <!--    the other Activities will use the default actionbar since they use -->
 <!--    android:theme="@style/AppTheme"-->
