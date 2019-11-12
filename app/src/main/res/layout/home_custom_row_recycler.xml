@@ -4,6 +4,7 @@
     android:id="@+id/HomeRecycRowWrapper"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/transparent"
     android:layout_margin="@dimen/home_recyc_wrapper_margin"
     android:layout_marginBottom="@dimen/home_recyc_wrapper_margin_bttm"
     android:orientation="vertical">
@@ -18,7 +19,6 @@
             android:layout_width="@dimen/home_recyc_image_width"
             android:layout_height="@dimen/home_recyc_image_height"
             android:contentDescription="@string/tourist_attraction_img"
-            android:padding="4dp"
             tools:src="@drawable/ic_profile" />
 
         <TextView
@@ -32,6 +32,8 @@
         <TextView
             android:id="@+id/HOmeRecycRowDescription"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:paddingBottom="4dp"
             style="@style/home_recycler_view_text_styles"
             android:layout_below="@id/HOmeRecycRowTitle"
             android:textColor="@color/colorDarkerGrey"
@@ -39,9 +41,4 @@
             android:textSize="@dimen/home_descriptn_txt_size"
             tools:text="@string/tourist_place_description" />
     </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#c0c0c0" />
 </LinearLayout>

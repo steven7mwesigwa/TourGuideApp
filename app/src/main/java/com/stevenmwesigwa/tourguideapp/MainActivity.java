@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     private ArrayList<GamePark> gameParkArrayList;
-//    private HomeFragment homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +30,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         /* Populate gameParkArrayList with data */
         gameParkArrayList = new GameParkModel(this).get();
-
-        /*
-Pass context to message fragment
-        homeFragment = new HomeFragment(this);
-*/
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Tell your app that you want to use your own toolbar instead
