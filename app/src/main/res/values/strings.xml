@@ -7,8 +7,9 @@
     <string name="drawer_send">Send</string>
     <string name="drawer_communicate">Communicate</string>
     <string name="author_email">contact@stevenmwesigwa.com</string>
+    <!--    Logo Image Content Description-->
     <string name="app_image_description">Tour Guide App Image / Logo</string>
-
+    <!--For accessibility purposes i.e the blind, screen readers-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
