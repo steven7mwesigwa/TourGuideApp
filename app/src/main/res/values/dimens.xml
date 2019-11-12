@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="home_title_txt_size">14sp</dimen>
+    <dimen name="home_descriptn_txt_size">12sp</dimen>
+    <dimen name="home_recyc_image_width">50dp</dimen>
+    <dimen name="home_recyc_image_height">50dp</dimen>
+    <dimen name="home_recyc_wrapper_margin_bttm">2dp</dimen>
+    <dimen name="home_recyc_wrapper_margin">2dp</dimen>
+</resources>

@@ -13,16 +13,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import com.stevenmwesigwa.tourguideapp.fragments.ChatFragment;
-import com.stevenmwesigwa.tourguideapp.fragments.MessageFragment;
+import com.stevenmwesigwa.tourguideapp.fragments.HomeFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
+    private HomeFragment homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Pass context to message fragment
+        homeFragment = new HomeFragment(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Tell your app that you want to use your own toolbar instead
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          */
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new MessageFragment()).commit();
+                    new HomeFragment(this)).commit();
             // We also want to select our first item in the navigation drawer
             navigationView.setCheckedItem(R.id.nav_message);
         }
@@ -72,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_message:
                 // Open the Message Fragment and display it in the FrameLayout
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MessageFragment()).commit();
+                        new HomeFragment(this)).commit();
                 break;
             case R.id.nav_chat:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

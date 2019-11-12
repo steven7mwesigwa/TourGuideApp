@@ -15,11 +15,9 @@
 
         <ImageView
             android:id="@+id/HomeRecycRowImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/home_recyc_image_width"
+            android:layout_height="@dimen/home_recyc_image_height"
             android:contentDescription="@string/tourist_attraction_img"
-            android:maxWidth="@dimen/home_recyc_image_max_width"
-            android:maxHeight="@dimen/home_recyc_image_max_height"
             android:padding="4dp"
             tools:src="@drawable/ic_profile" />
 
@@ -27,14 +25,18 @@
             android:id="@+id/HOmeRecycRowTitle"
             style="@style/home_recycler_view_text_styles"
             android:layout_toEndOf="@id/HomeRecycRowImage"
+            android:layout_alignParentTop="true"
             android:maxLines="1"
             tools:text="@string/tourist_place_title" />
 
         <TextView
             android:id="@+id/HOmeRecycRowDescription"
+            android:layout_marginStart="8dp"
             style="@style/home_recycler_view_text_styles"
             android:layout_below="@id/HOmeRecycRowTitle"
+            android:textColor="@color/colorDarkerGrey"
             android:layout_toEndOf="@id/HomeRecycRowImage"
+            android:textSize="@dimen/home_descriptn_txt_size"
             tools:text="@string/tourist_place_description" />
     </RelativeLayout>
 
