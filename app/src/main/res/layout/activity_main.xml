@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.stevenmwesigwa.tourguideapp.MainActivity"
+    tools:context="com.stevenmwesigwa.tourguideapp.activities.MainActivity"
     tools:openDrawer="start">
 <!--    android:fitsSystemWindows="true" - makes the navigation drawer come at the-->
 <!--    top of our screen-->

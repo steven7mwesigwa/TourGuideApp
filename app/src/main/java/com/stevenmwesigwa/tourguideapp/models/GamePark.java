@@ -1,4 +1,4 @@
-package com.stevenmwesigwa.tourguideapp;
+package com.stevenmwesigwa.tourguideapp.models;
 
 public class GamePark {
     private int id;

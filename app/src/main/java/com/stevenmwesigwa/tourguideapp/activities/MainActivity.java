@@ -1,4 +1,4 @@
-package com.stevenmwesigwa.tourguideapp;
+package com.stevenmwesigwa.tourguideapp.activities;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,10 +12,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
-import com.stevenmwesigwa.tourguideapp.dataset.GameParkModel;
+import com.stevenmwesigwa.tourguideapp.R;
+import com.stevenmwesigwa.tourguideapp.controllers.GameParkController;
 import com.stevenmwesigwa.tourguideapp.fragments.ChatFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.HomeFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.ProfileFragment;
+import com.stevenmwesigwa.tourguideapp.models.GamePark;
 
 import java.util.ArrayList;
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         /* Populate gameParkArrayList with data */
-        gameParkArrayList = new GameParkModel(this).get();
+        gameParkArrayList = new GameParkController(this).get();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Tell your app that you want to use your own toolbar instead

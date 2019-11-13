@@ -1,8 +1,8 @@
-package com.stevenmwesigwa.tourguideapp.dataset;
+package com.stevenmwesigwa.tourguideapp.controllers;
 
 import android.content.Context;
 
-import com.stevenmwesigwa.tourguideapp.GamePark;
+import com.stevenmwesigwa.tourguideapp.models.GamePark;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,10 +15,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class GameParkModel {
+public class GameParkController {
     private Context context;
 
-    public GameParkModel(Context context) {
+    public GameParkController(Context context) {
         this.context = context;
     }
 

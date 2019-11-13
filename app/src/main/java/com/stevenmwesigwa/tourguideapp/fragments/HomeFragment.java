@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.stevenmwesigwa.tourguideapp.GamePark;
 import com.stevenmwesigwa.tourguideapp.R;
 import com.stevenmwesigwa.tourguideapp.adapters.HomeListAdapter;
+import com.stevenmwesigwa.tourguideapp.models.GamePark;
 
 import java.util.ArrayList;
 
