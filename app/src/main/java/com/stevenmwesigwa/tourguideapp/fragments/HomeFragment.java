@@ -25,7 +25,6 @@ public class HomeFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-
     public HomeFragment(Context context, ArrayList<GamePark> gameParkArrayList) {
         this.context = context;
         this.gameParkArrayList = gameParkArrayList;
@@ -35,21 +34,25 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
+// Initialize Recycler View
         recyclerView = view.findViewById(R.id.HomeRecyclerView);
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true);
 
-        // use a linear layout manager
+        /* use a linear layout manager
+         *  Responsible for  aligning the single items in our list
+         *
+         * */
         layoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(layoutManager);
 
-        // specify an adapter
+        /* specify an adapter
+         * The Adapter is basically a bridge between our 'dataset' and the 'RecyclerView'
+         * Because we can't just load all our items at once in the Recycler view
+         * */
         mAdapter = new HomeListAdapter(gameParkArrayList, context);
         recyclerView.setAdapter(mAdapter);
-
-
         return view;
 
 

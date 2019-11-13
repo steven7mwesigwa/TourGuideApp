@@ -120,8 +120,3 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 }
-
-/*
- * To listen to click events on our 'navigation view'
- * We need to first have a reference to it.
- */
