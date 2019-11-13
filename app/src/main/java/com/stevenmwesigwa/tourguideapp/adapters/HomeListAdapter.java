@@ -11,8 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.stevenmwesigwa.tourguideapp.GamePark;
 import com.stevenmwesigwa.tourguideapp.R;
+import com.stevenmwesigwa.tourguideapp.models.GamePark;
+import com.stevenmwesigwa.tourguideapp.utilities.DownloadImageTask;
 
 import java.util.ArrayList;
 
@@ -48,7 +49,10 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeLi
         // - replace the contents of the view with that element
         holder.title.setText(gameParkArrayList.get(position).getTitle());
         holder.description.setText(gameParkArrayList.get(position).getDescription());
-        holder.image.setContentDescription(gameParkArrayList.get(position).getImage());
+        final String imageViewURL = gameParkArrayList.get(position).getImage();
+        // show The Image in a ImageView
+        new DownloadImageTask(holder.image)
+                .execute(imageViewURL);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
