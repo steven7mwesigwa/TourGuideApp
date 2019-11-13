@@ -1,6 +1,7 @@
 package com.stevenmwesigwa.tourguideapp.adapters;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.stevenmwesigwa.tourguideapp.R;
+import com.stevenmwesigwa.tourguideapp.activities.MainActivity;
+import com.stevenmwesigwa.tourguideapp.fragments.HomeItemDetailsFragment;
 import com.stevenmwesigwa.tourguideapp.models.GamePark;
 import com.stevenmwesigwa.tourguideapp.utilities.DownloadImageTask;
 
@@ -44,15 +47,49 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeLi
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(HomeListViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        holder.title.setText(gameParkArrayList.get(position).getTitle());
-        holder.description.setText(gameParkArrayList.get(position).getDescription());
+    public void onBindViewHolder(HomeListViewHolder holder, final int position) {
+        final String title = gameParkArrayList.get(position).getTitle();
+        final String description = gameParkArrayList.get(position).getDescription();
         final String imageViewURL = gameParkArrayList.get(position).getImage();
+        /*
+         * - get element from your dataset at this position
+         * - replace the contents of the view with that element
+         */
+        holder.title.setText(title);
+        holder.description.setText(description);
         // show The Image in a ImageView
         new DownloadImageTask(holder.image)
                 .execute(imageViewURL);
+
+        /* Set up on Click Listener
+         *   to open the respective Fragment on click.
+         *  */
+        holder.linearLayoutWrapper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final HomeItemDetailsFragment homeItemDetailsFragment = new HomeItemDetailsFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("title", title);
+                bundle.putString("description", description);
+                bundle.putString("imageViewURL", imageViewURL);
+                //Link values with the homeItemDetailsFragment
+                homeItemDetailsFragment.setArguments(bundle);
+                /* Let's begin the transaction
+                 * We will invoke this Adapter through our MainActivity.java file.
+                 * */
+                MainActivity mainActivity = (MainActivity) mContext;
+                mainActivity.getSupportFragmentManager()
+                        .beginTransaction()
+                        //Replace the already added fragment from MainActivity.java
+                        .replace(R.id.fragment_container, homeItemDetailsFragment)
+                        /*
+                         * Calling addToBackStack() as part of our FragmentTransaction
+                         * to be able to transition between Fragments
+                         **/
+                        .addToBackStack("HomeFragment")
+                        .commit();
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)

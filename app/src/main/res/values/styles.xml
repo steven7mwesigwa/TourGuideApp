@@ -29,4 +29,10 @@
         <item name="android:textSize">@dimen/home_title_txt_size</item>
     </style>
 
+    <!--    Home Item Details Text Styles-->
+    <style name="home_item_details_text_styles">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
 </resources>
