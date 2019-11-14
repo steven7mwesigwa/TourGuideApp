@@ -13,10 +13,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import com.stevenmwesigwa.tourguideapp.R;
+import com.stevenmwesigwa.tourguideapp.controllers.CulturalSiteController;
 import com.stevenmwesigwa.tourguideapp.controllers.GameParkController;
-import com.stevenmwesigwa.tourguideapp.fragments.ChatFragment;
+import com.stevenmwesigwa.tourguideapp.fragments.CulturalSiteFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.HomeFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.ProfileFragment;
+import com.stevenmwesigwa.tourguideapp.models.CulturalSite;
 import com.stevenmwesigwa.tourguideapp.models.GamePark;
 
 import java.util.ArrayList;
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     private ArrayList<GamePark> gameParkArrayList;
+    private ArrayList<CulturalSite> culturalSiteArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         /* Populate gameParkArrayList with data */
         gameParkArrayList = new GameParkController(this).get();
+        /* Populate culturalSiteArrayList with data */
+        culturalSiteArrayList = new CulturalSiteController(this).get();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Tell your app that you want to use your own toolbar instead
@@ -85,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_chat:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ChatFragment()).commit();
+                        new CulturalSiteFragment(this, culturalSiteArrayList)).commit();
                 break;
             case R.id.nav_profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

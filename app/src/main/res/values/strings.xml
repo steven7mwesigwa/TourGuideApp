@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TourGuideApp</string>
-    <string name="drawer_home">Home</string>
-    <string name="drawer_chat">Chat</string>
+    <string name="drawer_game_park">Game Parks</string>
+    <string name="drawer_cultural_site">Cultural Sites</string>
     <string name="drawer_profile">Profile</string>
     <string name="drawer_share">Share</string>
     <string name="drawer_send">Send</string>

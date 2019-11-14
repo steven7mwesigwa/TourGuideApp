@@ -3,11 +3,11 @@
     android:id="@+id/HomeRecycRowWrapper"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
     android:layout_margin="@dimen/home_recyc_wrapper_margin"
     android:layout_marginBottom="@dimen/home_recyc_wrapper_margin_bttm"
+    android:background="@android:color/transparent"
     android:orientation="vertical">
 
-   <include layout="@layout/fragment_partial_inc_custom_row_recycler" />
+    <include layout="@layout/fragment_partial_inc_custom_row_recycler" />
 
 </LinearLayout>
