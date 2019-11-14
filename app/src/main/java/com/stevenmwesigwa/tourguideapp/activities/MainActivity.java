@@ -17,7 +17,6 @@ import com.stevenmwesigwa.tourguideapp.controllers.CulturalSiteController;
 import com.stevenmwesigwa.tourguideapp.controllers.GameParkController;
 import com.stevenmwesigwa.tourguideapp.fragments.CulturalSiteFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.HomeFragment;
-import com.stevenmwesigwa.tourguideapp.fragments.ProfileFragment;
 import com.stevenmwesigwa.tourguideapp.models.CulturalSite;
 import com.stevenmwesigwa.tourguideapp.models.GamePark;
 
@@ -88,13 +87,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment(this, gameParkArrayList)).commit();
                 break;
-            case R.id.nav_chat:
+            case R.id.nav_cultural_site:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CulturalSiteFragment(this, culturalSiteArrayList)).commit();
-                break;
-            case R.id.nav_profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ProfileFragment()).commit();
                 break;
             case R.id.nav_share:
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
