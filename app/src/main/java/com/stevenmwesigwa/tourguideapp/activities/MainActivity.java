@@ -66,10 +66,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          * When the deice is rotated 'savedInstanceState' won't be null.
          */
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment(this, gameParkArrayList)).commit();
+            final HomeFragment homeFragment = new HomeFragment(this, gameParkArrayList);
+            homeFragment.setRetainInstance(true);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment
+            ).commit();
             // We also want to select our first item in the navigation drawer
-            navigationView.setCheckedItem(R.id.nav_message);
+            navigationView.setCheckedItem(R.id.nav_game_park);
         }
     }
 
@@ -82,12 +84,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_message:
+            case R.id.nav_game_park:
+                final HomeFragment homeFragment = new HomeFragment(this, gameParkArrayList);
+                homeFragment.setRetainInstance(true);
                 // Open the Message Fragment and display it in the FrameLayout
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment(this, gameParkArrayList)).commit();
+                        homeFragment).commit();
                 break;
             case R.id.nav_cultural_site:
+                final CulturalSiteFragment culturalSiteFragment = new CulturalSiteFragment(this, culturalSiteArrayList);
+                culturalSiteFragment.setRetainInstance(true);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CulturalSiteFragment(this, culturalSiteArrayList)).commit();
                 break;

@@ -68,6 +68,8 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeLi
             @Override
             public void onClick(View view) {
                 final HomeItemDetailsFragment homeItemDetailsFragment = new HomeItemDetailsFragment();
+                //Avoid app crash when orientation is changed
+                homeItemDetailsFragment.setRetainInstance(true);
                 Bundle bundle = new Bundle();
                 bundle.putString("title", title);
                 bundle.putString("description", description);

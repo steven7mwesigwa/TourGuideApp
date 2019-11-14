@@ -7,7 +7,7 @@
     <!--    Item stays selected-->
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_message"
+            android:id="@+id/nav_game_park"
             android:icon="@drawable/ic_message"
             android:title="@string/drawer_game_park" />
         <item

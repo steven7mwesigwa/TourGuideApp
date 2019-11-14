@@ -68,6 +68,8 @@ public class CulturalSiteListAdapter extends RecyclerView.Adapter<CulturalSiteLi
             @Override
             public void onClick(View view) {
                 final CulturalSiteItemDetailsFragment culturalSiteItemDetailsFragment = new CulturalSiteItemDetailsFragment();
+                //Avoid app crash when orientation is changed
+                culturalSiteItemDetailsFragment.setRetainInstance(true);
                 Bundle bundle = new Bundle();
                 bundle.putString("title", title);
                 bundle.putString("description", description);
