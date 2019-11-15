@@ -1,5 +1,6 @@
 package com.stevenmwesigwa.tourguideapp.fragments;
 
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,8 +18,10 @@ import org.apache.commons.text.WordUtils;
 
 import java.util.Objects;
 
-
-public class HomeItemDetailsFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class TouristAttractionItemDetailsFragment extends Fragment {
 
     @Nullable
     @Override

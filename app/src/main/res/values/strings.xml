@@ -17,4 +17,7 @@
     <string name="tourist_place_description">Nestled in the wild frontier region of Uganda,
         Kidepo Valley National Park is apparently the most isolated national park in Uganda but still stands out to be one of the best virgin places every wildlife viewer can ever visit in Uganda. This virgin national park is undoubtedly among the best wilderness areas in Africa, harboring a couple of extinct species of wildlife that can\'t be found in any other Ugandan national park. Kidepo is right at the core of a Savannah landscape right next to a few mountainous bodies. </string>
     <string name="home_details_title">Kidepo national game park</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

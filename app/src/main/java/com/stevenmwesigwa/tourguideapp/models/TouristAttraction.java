@@ -1,12 +1,12 @@
 package com.stevenmwesigwa.tourguideapp.models;
 
-public class GamePark {
+public class TouristAttraction {
     private int id;
     private String title;
     private String description;
     private String image;
 
-    public GamePark(int id, String title, String description, String image) {
+    public TouristAttraction(int id, String title, String description, String image) {
         this.id = id;
         this.title = title;
         this.description = description;

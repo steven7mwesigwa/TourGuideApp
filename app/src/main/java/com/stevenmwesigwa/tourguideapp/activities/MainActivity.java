@@ -14,17 +14,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.stevenmwesigwa.tourguideapp.R;
 import com.stevenmwesigwa.tourguideapp.controllers.CulturalSiteController;
-import com.stevenmwesigwa.tourguideapp.controllers.GameParkController;
+import com.stevenmwesigwa.tourguideapp.controllers.TouristAttractionController;
 import com.stevenmwesigwa.tourguideapp.fragments.CulturalSiteFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.HomeFragment;
 import com.stevenmwesigwa.tourguideapp.models.CulturalSite;
-import com.stevenmwesigwa.tourguideapp.models.GamePark;
+import com.stevenmwesigwa.tourguideapp.models.TouristAttraction;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
-    private ArrayList<GamePark> gameParkArrayList;
+    private ArrayList<TouristAttraction> gameParkArrayList;
     private ArrayList<CulturalSite> culturalSiteArrayList;
 
     @Override
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         /* Populate gameParkArrayList with data */
-        gameParkArrayList = new GameParkController(this).get();
+        gameParkArrayList = new TouristAttractionController(this).get("gameParksList.json");
         /* Populate culturalSiteArrayList with data */
         culturalSiteArrayList = new CulturalSiteController(this).get();
 

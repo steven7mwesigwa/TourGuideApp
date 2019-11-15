@@ -24,7 +24,7 @@ public class CulturalSiteItemDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // inflate xml file for Home Item Details
-        final View view = inflater.inflate(R.layout.fragment_cultural_site_item_details, container, false);
+        final View view = inflater.inflate(R.layout.fragment_tourist_item_details, container, false);
 
         // References to xml file Views
         final TextView title = view.findViewById(R.id.HomeDetailsTitle);

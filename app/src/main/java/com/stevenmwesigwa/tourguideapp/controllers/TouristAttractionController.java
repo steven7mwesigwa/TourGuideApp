@@ -2,7 +2,7 @@ package com.stevenmwesigwa.tourguideapp.controllers;
 
 import android.content.Context;
 
-import com.stevenmwesigwa.tourguideapp.models.GamePark;
+import com.stevenmwesigwa.tourguideapp.models.TouristAttraction;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,17 +15,17 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class GameParkController {
+public class TouristAttractionController {
     private Context context;
 
-    public GameParkController(Context context) {
+    public TouristAttractionController(Context context) {
         this.context = context;
     }
 
-    public ArrayList<GamePark> get() {
-        ArrayList<GamePark> gameParkArrayList = new ArrayList<>();
+    public ArrayList<TouristAttraction> get(String JSONFilename) {
+        ArrayList<TouristAttraction> touristAttractionArrayList = new ArrayList<>();
         try {
-            JSONArray jsonArray = new JSONArray(Objects.requireNonNull(loadJSONFromAsset()));
+            JSONArray jsonArray = new JSONArray(Objects.requireNonNull(loadJSONFromAsset(JSONFilename)));
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject row = jsonArray.getJSONObject(i);
                 int id = row.getInt("id");
@@ -33,21 +33,21 @@ public class GameParkController {
                 String description = row.getString("description");
                 String image = row.getString("image");
 
-                GamePark gamePark = new GamePark(id, title, description, image);
-                gameParkArrayList.add(gamePark);
+                TouristAttraction touristAttraction = new TouristAttraction(id, title, description, image);
+                touristAttractionArrayList.add(touristAttraction);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return gameParkArrayList;
+        return touristAttractionArrayList;
     }
 
-    private String loadJSONFromAsset() {
+    private String loadJSONFromAsset(String JSONFilename) {
         //function to load the JSON from the Asset and return the object
         String json = null;
         final Charset charset = StandardCharsets.UTF_8;
         try {
-            InputStream inputStream = context.getAssets().open("gameParksList.json");
+            InputStream inputStream = context.getAssets().open(JSONFilename);
             int size = inputStream.available();
             byte[] buffer = new byte[size];
             inputStream.read(buffer);

@@ -41,7 +41,7 @@ public class CulturalSiteListAdapter extends RecyclerView.Adapter<CulturalSiteLi
     @Override
     public CulturalSiteListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         /* We inflate the xml which gives us a View object */
-        View view = mInflater.inflate(R.layout.cultural_site_custom_row_recycler, parent, false);
+        View view = mInflater.inflate(R.layout.tourist_custom_row_recycler, parent, false);
         return new CulturalSiteListViewHolder(view);
     }
 

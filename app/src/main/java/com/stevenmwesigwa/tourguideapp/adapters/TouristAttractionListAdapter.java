@@ -14,43 +14,45 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.stevenmwesigwa.tourguideapp.R;
 import com.stevenmwesigwa.tourguideapp.activities.MainActivity;
-import com.stevenmwesigwa.tourguideapp.fragments.HomeItemDetailsFragment;
-import com.stevenmwesigwa.tourguideapp.models.GamePark;
+import com.stevenmwesigwa.tourguideapp.fragments.TouristAttractionItemDetailsFragment;
+import com.stevenmwesigwa.tourguideapp.models.TouristAttraction;
 import com.stevenmwesigwa.tourguideapp.utilities.DownloadImageTask;
 
 import java.util.ArrayList;
 
-public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeListViewHolder> {
-    private ArrayList<GamePark> gameParkArrayList;
+public class TouristAttractionListAdapter extends RecyclerView.Adapter<TouristAttractionListAdapter.TouristAttractionViewHolder> {
+    private ArrayList<TouristAttraction> touristAttractionArrayList;
     /**
      * Define LayoutInflater
      */
     private LayoutInflater mInflater;
     private Context mContext;
+    private String callingFragment;
 
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public HomeListAdapter(ArrayList<GamePark> gameParkArrayList, Context context) {
+    public TouristAttractionListAdapter(ArrayList<TouristAttraction> touristAttractionArrayList, Context context, String callingFragment) {
         this.mInflater = LayoutInflater.from(context);
-        this.gameParkArrayList = gameParkArrayList;
+        this.touristAttractionArrayList = touristAttractionArrayList;
         this.mContext = context;
+        this.callingFragment = callingFragment;
     }
 
     //Create new views (invoked by the layout manager)
     @NonNull
     @Override
-    public HomeListAdapter.HomeListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TouristAttractionListAdapter.TouristAttractionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         /* We inflate the xml which gives us a View object */
-        View view = mInflater.inflate(R.layout.home_custom_row_recycler, parent, false);
-        return new HomeListAdapter.HomeListViewHolder(view);
+        View view = mInflater.inflate(R.layout.tourist_custom_row_recycler, parent, false);
+        return new TouristAttractionListAdapter.TouristAttractionViewHolder(view);
     }
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(HomeListViewHolder holder, final int position) {
-        final String title = gameParkArrayList.get(position).getTitle();
-        final String description = gameParkArrayList.get(position).getDescription();
-        final String imageViewURL = gameParkArrayList.get(position).getImage();
+    public void onBindViewHolder(TouristAttractionListAdapter.TouristAttractionViewHolder holder, final int position) {
+        final String title = touristAttractionArrayList.get(position).getTitle();
+        final String description = touristAttractionArrayList.get(position).getDescription();
+        final String imageViewURL = touristAttractionArrayList.get(position).getImage();
         /*
          * - get element from your dataset at this position
          * - replace the contents of the view with that element
@@ -67,15 +69,15 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeLi
         holder.linearLayoutWrapper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final HomeItemDetailsFragment homeItemDetailsFragment = new HomeItemDetailsFragment();
+                final TouristAttractionItemDetailsFragment touristAttractionItemDetailsFragment = new TouristAttractionItemDetailsFragment();
                 //Avoid app crash when orientation is changed
-                homeItemDetailsFragment.setRetainInstance(true);
+                touristAttractionItemDetailsFragment.setRetainInstance(true);
                 Bundle bundle = new Bundle();
                 bundle.putString("title", title);
                 bundle.putString("description", description);
                 bundle.putString("imageViewURL", imageViewURL);
-                //Link values with the homeItemDetailsFragment
-                homeItemDetailsFragment.setArguments(bundle);
+                //Link values with the touristAttractionItemDetailsFragment
+                touristAttractionItemDetailsFragment.setArguments(bundle);
                 /* Let's begin the transaction
                  * We will invoke this Adapter through our MainActivity.java file.
                  * */
@@ -83,12 +85,12 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeLi
                 mainActivity.getSupportFragmentManager()
                         .beginTransaction()
                         //Replace the already added fragment from MainActivity.java
-                        .replace(R.id.fragment_container, homeItemDetailsFragment)
+                        .replace(R.id.fragment_container, touristAttractionItemDetailsFragment)
                         /*
                          * Calling addToBackStack() as part of our FragmentTransaction
                          * to be able to transition between Fragments
                          **/
-                        .addToBackStack("HomeFragment")
+                        .addToBackStack(callingFragment)
                         .commit();
             }
         });
@@ -97,10 +99,10 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeLi
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        if (gameParkArrayList == null) {
+        if (touristAttractionArrayList == null) {
             return 0;
         } else {
-            return gameParkArrayList.size();
+            return touristAttractionArrayList.size();
         }
     }
 
@@ -110,13 +112,13 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeLi
      * you provide access to all the views for a data item in a view holder
      * This is where we will initialize our views
      */
-    public class HomeListViewHolder extends RecyclerView.ViewHolder {
+    public class TouristAttractionViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         TextView description;
         ImageView image;
         LinearLayout linearLayoutWrapper;
 
-        public HomeListViewHolder(View view) {
+        public TouristAttractionViewHolder(View view) {
             super(view);
             title = view.findViewById(R.id.HOmeRecycRowTitle);
             description = view.findViewById(R.id.HOmeRecycRowDescription);

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/HomeRecycRowWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/home_recyc_wrapper_margin"
+    android:layout_marginBottom="@dimen/home_recyc_wrapper_margin_bttm"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangular_shape">
+
+        <ImageView
+            android:id="@+id/HomeRecycRowImage"
+            android:layout_width="@dimen/home_recyc_image_width"
+            android:layout_height="@dimen/home_recyc_image_height"
+            android:contentDescription="@string/tourist_attraction_img"
+            tools:src="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/HOmeRecycRowTitle"
+            style="@style/home_recycler_view_text_styles"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/HomeRecycRowImage"
+            android:maxLines="1"
+            tools:text="@string/tourist_place_title" />
+
+        <TextView
+            android:id="@+id/HOmeRecycRowDescription"
+            style="@style/home_recycler_view_text_styles"
+            android:layout_below="@id/HOmeRecycRowTitle"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/HomeRecycRowImage"
+            android:paddingBottom="4dp"
+            android:textColor="@color/colorDarkerGrey"
+            android:textSize="@dimen/home_descriptn_txt_size"
+            tools:text="@string/tourist_place_description" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.stevenmwesigwa.tourguideapp.R;
-import com.stevenmwesigwa.tourguideapp.adapters.HomeListAdapter;
-import com.stevenmwesigwa.tourguideapp.models.GamePark;
+import com.stevenmwesigwa.tourguideapp.adapters.TouristAttractionListAdapter;
+import com.stevenmwesigwa.tourguideapp.models.TouristAttraction;
 
 import java.util.ArrayList;
 
@@ -21,11 +21,11 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private Context context;
-    private ArrayList<GamePark> gameParkArrayList;
+    private ArrayList<TouristAttraction> gameParkArrayList;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    public HomeFragment(Context context, ArrayList<GamePark> gameParkArrayList) {
+    public HomeFragment(Context context, ArrayList<TouristAttraction> gameParkArrayList) {
         this.context = context;
         this.gameParkArrayList = gameParkArrayList;
     }
@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
          * The Adapter is basically a bridge between our 'dataset' and the 'RecyclerView'
          * Because we can't just load all our items at once in the Recycler view
          * */
-        mAdapter = new HomeListAdapter(gameParkArrayList, context);
+        mAdapter = new TouristAttractionListAdapter(gameParkArrayList, context, "HomeFragment");
         recyclerView.setAdapter(mAdapter);
         return view;
 
