@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.stevenmwesigwa.tourguideapp.R;
-import com.stevenmwesigwa.tourguideapp.adapters.CulturalSiteListAdapter;
-import com.stevenmwesigwa.tourguideapp.models.CulturalSite;
+import com.stevenmwesigwa.tourguideapp.adapters.TouristAttractionListAdapter;
+import com.stevenmwesigwa.tourguideapp.models.TouristAttraction;
 
 import java.util.ArrayList;
 
@@ -21,11 +21,11 @@ public class CulturalSiteFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private Context context;
-    private ArrayList<CulturalSite> culturalSiteArrayList;
+    private ArrayList<TouristAttraction> culturalSiteArrayList;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
-    public CulturalSiteFragment(Context context, ArrayList<CulturalSite> culturalSiteArrayList) {
+    public CulturalSiteFragment(Context context, ArrayList<TouristAttraction> culturalSiteArrayList) {
         this.context = context;
         this.culturalSiteArrayList = culturalSiteArrayList;
     }
@@ -51,7 +51,7 @@ public class CulturalSiteFragment extends Fragment {
          * The Adapter is basically a bridge between our 'dataset' and the 'RecyclerView'
          * Because we can't just load all our items at once in the Recycler view
          * */
-        mAdapter = new CulturalSiteListAdapter(culturalSiteArrayList, context);
+        mAdapter = new TouristAttractionListAdapter(culturalSiteArrayList, context, "CulturalSiteFragment");
         recyclerView.setAdapter(mAdapter);
         return view;
 
