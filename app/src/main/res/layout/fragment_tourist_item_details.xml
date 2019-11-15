@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".fragments.HomeItemDetailsFragment">
+        tools:context=".fragments.TouristAttractionItemDetailsFragment">
 
         <TextView
             android:id="@+id/HomeDetailsTitle"
