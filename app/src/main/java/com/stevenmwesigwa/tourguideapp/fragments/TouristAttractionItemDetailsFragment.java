@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.stevenmwesigwa.tourguideapp.R;
 import com.stevenmwesigwa.tourguideapp.utilities.DownloadImageTask;
+import com.stevenmwesigwa.tourguideapp.utilities.touristAttraction.TourPlaceDetails;
 
 import org.apache.commons.text.WordUtils;
 
@@ -36,9 +37,9 @@ public class TouristAttractionItemDetailsFragment extends Fragment {
 
         if (getArguments() != null) {
             // Bundled Fragment arguments from HomeFragment.java
-            final String titleArg = Objects.requireNonNull(getArguments()).getString("title");
-            final String descriptionArg = Objects.requireNonNull(getArguments()).getString("description");
-            final String imageViewURLArg = Objects.requireNonNull(getArguments()).getString("imageViewURL");
+            final String titleArg = Objects.requireNonNull(getArguments()).getString(TourPlaceDetails.TITLE);
+            final String descriptionArg = Objects.requireNonNull(getArguments()).getString(TourPlaceDetails.DESCRIPTION);
+            final String imageViewURLArg = Objects.requireNonNull(getArguments()).getString(TourPlaceDetails.IMAGE_URL);
             // Set up Views in xml file with their respective Bundled data
             title.setText(WordUtils.capitalize(titleArg));
             description.setText(descriptionArg);

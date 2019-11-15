@@ -17,6 +17,7 @@ import com.stevenmwesigwa.tourguideapp.activities.MainActivity;
 import com.stevenmwesigwa.tourguideapp.fragments.TouristAttractionItemDetailsFragment;
 import com.stevenmwesigwa.tourguideapp.models.TouristAttraction;
 import com.stevenmwesigwa.tourguideapp.utilities.DownloadImageTask;
+import com.stevenmwesigwa.tourguideapp.utilities.touristAttraction.TourPlaceDetails;
 
 import java.util.ArrayList;
 
@@ -73,9 +74,9 @@ public class TouristAttractionListAdapter extends RecyclerView.Adapter<TouristAt
                 //Avoid app crash when orientation is changed
                 touristAttractionItemDetailsFragment.setRetainInstance(true);
                 Bundle bundle = new Bundle();
-                bundle.putString("title", title);
-                bundle.putString("description", description);
-                bundle.putString("imageViewURL", imageViewURL);
+                bundle.putString(TourPlaceDetails.TITLE, title);
+                bundle.putString(TourPlaceDetails.DESCRIPTION, description);
+                bundle.putString(TourPlaceDetails.IMAGE_URL, imageViewURL);
                 //Link values with the touristAttractionItemDetailsFragment
                 touristAttractionItemDetailsFragment.setArguments(bundle);
                 /* Let's begin the transaction
