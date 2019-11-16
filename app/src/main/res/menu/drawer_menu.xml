@@ -14,6 +14,14 @@
             android:id="@+id/nav_cultural_site"
             android:icon="@drawable/ic_chat"
             android:title="@string/drawer_cultural_site" />
+        <item
+            android:id="@+id/nav_dish"
+            android:icon="@drawable/ic_dish"
+            android:title="@string/drawer_dish" />
+        <item
+            android:id="@+id/nav_popular_place"
+            android:icon="@drawable/ic_place"
+            android:title="@string/drawer_popular_place" />
     </group>
 
     <!--    these won't stay selected when we choose them but-->

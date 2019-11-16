@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Lake Victoria",
+    "description": "If you really want to experience the heart of Uganda, the story begins with Lake Victoria, which is the birthplace of the Nile River. Not only is it Africa’s largest lake and the world’s largest tropical lake, but Lake Victoria also boasts one of the world’s largest ecosystems.\n\nThere is so much natural beauty and wildlife to see here – from scenic mountain views to islands, beaches, fishing boats and various bird and animal species.",
+    "image": "https://i.imgur.com/cpkhHf0.png"
+  },
+  {
+    "id": 2,
+    "title": "Ssese Islands",
+    "description": "A major tourist attraction in Uganda, the Ssese Islands are a group of about 84 islands dotted along the northwestern shores of Lake Victoria. Each island differs in size, shape and exotic flora and fauna.\n\nHere, you can relax amid beautiful scenery, see chimpanzees, walk on white-sand beaches, enjoy horseback riding and windsurfing, as well as interact with the Bantu people and learn about their culture.",
+    "image": "https://i.imgur.com/X0YOXLE.png"
+  },
+  {
+    "id": 3,
+    "title": "Kampala, Capital of Uganda",
+    "description": "When visiting places in Uganda, you don’t want to miss checking out the country’s capital city, Kampala. This city is home to a steady expat community and offers plenty of things to see and do.\n\nYou can tour beautiful temples, cathedrals, art galleries and museums that include the popular Uganda National Museum. You can also browse various markets for clothing, foods and crafts. Kampala also offers a good range of restaurants and bars.",
+    "image": "https://i.imgur.com/k0kqwyI.png"
+  },
+  {
+    "id": 4,
+    "title": "Lubiri Palace",
+    "description": "Lovers of history and architecture may appreciate a visit to the Lubiri Palace, home of the former king of Buganda. Situated on a hill overlooking Kampala, this domed, colonial-style building was involved in the Battle of Mengo in 1966. Today, you can take a guided tour to see the torture chambers and learn more about Uganda’s history and culture.",
+    "image": "https://i.imgur.com/MxjfWho.png"
+  },
+  {
+    "id": 5,
+    "title": "Acacia mall",
+    "description": "Situated in the vibrant Kisementi area of Kampala, the relaxed elegance of Acacia Mall is designed with the style-conscious in mind. Conveniently located close to the centre of Kampala, you can expect to be tempted in over 58 stores – from designer boutiques and lifestyle stores through to chic restaurants, and bars. If you are really looking for a one stop for all your shopping needs, then Acacia mall is the place from shops, cafes, salons, movie cinemas, to network service centers, its very clean awesome parking",
+    "image": "https://i.imgur.com/hwven95.png"
+  },
+  {
+    "id": 6,
+    "title": "Club Ambiance",
+    "description": "The club has three sections – with the executive at the ground floor, VIP on the second floor and ordinary on the first floor. Each section has different setup – with unique chairs, tables, lighting, a kitchen with smartly-dressed chefs, and big screens. And most importantly, everything is customised and branded “Club Ambiance”. What perhaps can’t miss your eye is that uniquely designed bar – with beaming white lights that make the club look modern.",
+    "image": "https://i.imgur.com/3PXZXNz.png"
+  },
+  {
+    "id": 7,
+    "title": "Shoprite Uganda",
+    "description": " Shoprite is a leading grocery supermarket that offers you a world-class shopping experience on a variety of food products, household goods and small appliances at our lowest possible prices.",
+    "image": "https://i.imgur.com/8I5bHLO.png"
+  }
+]

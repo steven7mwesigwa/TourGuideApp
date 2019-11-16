@@ -15,7 +15,9 @@ import com.google.android.material.navigation.NavigationView;
 import com.stevenmwesigwa.tourguideapp.R;
 import com.stevenmwesigwa.tourguideapp.controllers.TouristAttractionController;
 import com.stevenmwesigwa.tourguideapp.fragments.CulturalSiteFragment;
+import com.stevenmwesigwa.tourguideapp.fragments.DishFragment;
 import com.stevenmwesigwa.tourguideapp.fragments.HomeFragment;
+import com.stevenmwesigwa.tourguideapp.fragments.PopularPlaceFragment;
 import com.stevenmwesigwa.tourguideapp.models.TouristAttraction;
 
 import java.util.ArrayList;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     private ArrayList<TouristAttraction> gameParkArrayList;
     private ArrayList<TouristAttraction> culturalSiteArrayList;
+    private ArrayList<TouristAttraction> dishArrayList;
+    private ArrayList<TouristAttraction> popularPlaceArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         gameParkArrayList = new TouristAttractionController(this).get("gameParksList.json");
         /* Populate culturalSiteArrayList with data */
         culturalSiteArrayList = new TouristAttractionController(this).get("culturalSitesList.json");
+        /* Populate dishArrayList with data */
+        dishArrayList = new TouristAttractionController(this).get("dishesList.json");
+        /* Populate dishArrayList with data */
+        popularPlaceArrayList = new TouristAttractionController(this).get("popularPlacesList.json");
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         // Tell your app that you want to use your own toolbar instead
@@ -94,6 +102,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 culturalSiteFragment.setRetainInstance(true);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CulturalSiteFragment(this, culturalSiteArrayList)).commit();
+                break;
+            case R.id.nav_dish:
+                final DishFragment dishFragment = new DishFragment(this, dishArrayList);
+                dishFragment.setRetainInstance(true);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new CulturalSiteFragment(this, dishArrayList)).commit();
+                break;
+            case R.id.nav_popular_place:
+                final PopularPlaceFragment popularPlaceFragment = new PopularPlaceFragment(this, popularPlaceArrayList);
+                popularPlaceFragment.setRetainInstance(true);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new CulturalSiteFragment(this, popularPlaceArrayList)).commit();
                 break;
             case R.id.nav_share:
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();

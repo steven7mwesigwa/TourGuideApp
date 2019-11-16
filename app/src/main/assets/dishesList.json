@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Luwombo (or Oluwombo)",
+    "description": "This dish is believed to have been created by the personal chef of King Kabaka Mwanga of the Buganda Kingdom in the late 19th century and is a favorite among both royalty and common folk. This traditional Ugandan stew consists of chicken, beef or fish that is steamed with vegetables such as carrots, potatoes, and mushrooms along with peanut (g-nut) sauce in wrapped plantains. Luwombo is one of those nice, hearty dishes that hit the spot and makes you feel all warm and full inside.",
+    "image": "https://i.imgur.com/9JuYRH8.png"
+  },
+  {
+    "id": 2,
+    "title": "Posho",
+    "description": "Posho is one of those dishes that makes your food stick to your ribs and helps you feel full for a long time. Sometimes called ugali, posho is simply fine, white corn flour that is thoroughly mixed with boiling water until it stiffens into a smooth, doughy consistency. You may think this is a bland Uganda food, but when you eat it with other dishes like soups and beans, it enriches the overall meal and leaves you feeling satisfied.",
+    "image": "https://i.imgur.com/YP6cbir.png"
+  },
+  {
+    "id": 3,
+    "title": "Muchomo",
+    "description": "Muchomo is derived from a Swahili word that means “roasted meat.” Muchomo is a tasty Uganda food that includes various meats ranging from chicken to pork, goat, and sometimes beef. You’ll find these meat portions barbecued on a stick and served at roadside stalls, markets, and restaurants, often accompanied by roasted sweet plantains (known as gonja).",
+    "image": "https://i.imgur.com/SVPV6kQ.png"
+  },
+  {
+    "id": 4,
+    "title": "Chapati",
+    "description": "In Mexico, they have corn tortillas. In the U.S., they have biscuits or cornbread, and in France, they often have croissants. Every culture around the world has its one bread staple that they eat with everything. In Uganda, that bread staple is chapati. Made with wheat flour, baking powder, salt and water, chapatis are then rolled out into a pastry crust and often fried in a small amount of oil to thicken them. Once cooked, you can do all sorts of things with chapatis. You can eat them alone or with beans or soup, or even with tea. You can also use them as a wrap to hold minced meat and vegetables inside.",
+    "image": "https://i.imgur.com/RVe7y4f.png"
+  },
+  {
+    "id": 5,
+    "title": "Matooke",
+    "description": "You know you can’t leave Uganda without trying out its national dish. Matooke (sometimes spelled matooke) is a banana variety that is considered more of a plantain. Ugandans love to take the green, unripe ones and steam them while still unpeeled. However, sometimes the plantains are peeled and then steamed. The plantains are then mashed and eaten. Occasionally, matooke is fried with tomatoes and onions. An Indian-influenced alternative to matooke is making the fruit into a curry and adding spices to it.",
+    "image": "https://i.imgur.com/PiabykQ.png"
+  },
+  {
+    "id": 6,
+    "title": "Groundnut Sauce",
+    "description": "When in Uganda, you will hear this dish called g-nut sauce. This is the stuff that makes many Uganda dishes taste so yummy and rich. Made from sweet red peanuts into a creamy sauce, groundnut sauce is often served with dishes such as roasted fish, sweet potatoes, and matoke (boiled, mashed plantain).",
+    "image": "https://i.imgur.com/aKbhIU7.png"
+  },
+  {
+    "id": 7,
+    "title": "Rolex",
+    "description": "When people talk about a \"Rolex\" in Uganda, one of the last things they probably have in mind is a luxury watch.  In Uganda, the Rolex is the country's favourite snack, a sandwich made up of an omelette and chapati bread, and it derives its name from a play on the words \"rolled eggs\". The dish, which originated in the eastern town of Busoga, quickly became popular among students at Makerere University in Kampala: at around 1,000 Ugandan shillings (26 US cents, 23 euro cents), it was not only nourishing, but very affordable as well.",
+    "image": "https://i.imgur.com/5Q9fpo4.png"
+  }
+]

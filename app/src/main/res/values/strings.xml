@@ -2,7 +2,8 @@
     <string name="app_name">TourGuideApp</string>
     <string name="drawer_game_park">Game Parks</string>
     <string name="drawer_cultural_site">Cultural Sites</string>
-    <string name="drawer_profile">Profile</string>
+    <string name="drawer_dish">Dishes</string>
+    <string name="drawer_popular_place">Popular Places</string>
     <string name="drawer_share">Share</string>
     <string name="drawer_send">Send</string>
     <string name="drawer_communicate">Communicate</string>
